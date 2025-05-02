@@ -27,7 +27,7 @@ xlabel('Frequency (kHz)');
 ylabel('Magnitude (normalized)');
 title('Frequency Domain: Square Pulse Spectrum vs Ideal Filter');
 legend('Square Pulse Spectrum', 'Ideal LPF (Band-limited Channel)');
-xlim([-500 500]);  % Show ±500 kHz around 0
+xlim([-300 300]);  % Show ±300 kHz around 0
 grid on;
 
 
@@ -41,15 +41,17 @@ plot(t*1e6, filtered_time, 'r', 'LineWidth', 1.5);
 xlabel('Time (\mus)'); ylabel('Amplitude');
 legend('Original', 'Filtered');
 title('Square Pulse Before and After Band-Limited Channel ');
+
 grid on;
 
 
 figure;
-plot(f/1e3, abs(Square_pulse_Freq), 'b'); hold on;
-plot(f/1e3, abs(Filtered_Freq), 'r');
+plot(f/1e3, (Square_pulse_Freq), 'b'); hold on;
+plot(f/1e3, (Filtered_Freq), 'r');
 xlabel('Frequency (kHz)'); ylabel('|Amplitude|');
 legend('Original Spectrum', 'Filtered Spectrum');
 title('Frequency Domain Before and After Filtering');
+xlim([-200 200]);
 grid on;
 
 pulse1 = rectpuls((t - T) ,T/2);  % First pulse at t = T
