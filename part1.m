@@ -14,7 +14,7 @@ f = linspace(-Fs/2, Fs/2, N);   % Frequency axis centered at 0 Hz
 
 %% FFT of square pulse
 X_f = fftshift(fft(square_pulse));         % Centered FFT
-X_mag = abs(X_f) / max(abs(X_f));          % Normalize
+X_mag = (X_f) / max(abs(X_f));          % Normalize
 
 %% Define Ideal Low-Pass Filter in Frequency Domain
 thefilter = rectpuls(f,2*B);           % 1 in [-B, B], 0 elsewhere
@@ -45,7 +45,7 @@ grid on;
 
 
 figure;
-plot(f/1e3, abs(Square_Freq), 'b'); hold on;
+plot(f/1e3, abs(Square_pulse_Freq), 'b'); hold on;
 plot(f/1e3, abs(Filtered_Freq), 'r');
 xlabel('Frequency (kHz)'); ylabel('|Amplitude|');
 legend('Original Spectrum', 'Filtered Spectrum');
