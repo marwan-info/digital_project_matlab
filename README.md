@@ -1,15 +1,21 @@
 # digital_project_matlab
 
 ## part 1 :  Inter-Symbol Interference due to band-limited channels
+the output or part1 : 
+![image](https://github.com/user-attachments/assets/c84ef689-b23f-4e02-9a0b-81d8246e9bb7)
+![image](https://github.com/user-attachments/assets/732d2ce5-ab32-4442-b509-7cb7351e83d8)
+![image](https://github.com/user-attachments/assets/05730255-d0a4-4645-9477-366f7008633a)
+![image](https://github.com/user-attachments/assets/dea813b4-e299-4d50-aaec-1edd8fed48c0)
+![image](https://github.com/user-attachments/assets/d36cedc0-0d2b-45c0-9f9b-5edf51da73ac)
 
 ### steps : 
 
 ## ✅ **Part 1: Effect of a Band-Limited Channel on a Single Square Pulse**
-### **Step 1: Define Parameters**
-### **Step 2: Generate a Square Pulse of Duration T = 2/B**
-### **Step 3: Create Band-Limited Channel (Ideal Low-Pass Filter)**
-### **Step 4: Apply Filter in Frequency Domain**
-### **Step 5: Plot Time Domain (Before and After)**
+**Step 1: Define Parameters**
+**Step 2: Generate a Square Pulse of Duration T = 2/B**
+**Step 3: Create Band-Limited Channel (Ideal Low-Pass Filter)**
+**Step 4: Apply Filter in Frequency Domain**
+ **Step 5: Plot Time Domain (Before and After)**
 #### 🔍 **Why This Shape?**
 ---
 After filtering, the square pulse becomes **smeared out** — no longer sharp edges. This is due to the loss of high-frequency components. The result is a **sinc-like ringing** (Gibbs phenomenon), which **extends beyond the original duration T**. This is the beginning of **Inter-Symbol Interference (ISI)**.
