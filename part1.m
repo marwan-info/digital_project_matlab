@@ -1,21 +1,9 @@
-%B = 100e3;          % Channel bandwidth = 100 kHz
-%T = 2/B;            % Pulse duration = 2/B
-%Fs = 10*B;          % Sampling rate (10x B for better resolution)
-%dt = 1/Fs;
-%t = -5*T:dt:5*T;    % Time axis centered around 0
-
-%square_pulse = double(abs(t) <= T);  % Square pulse centered at t=0
-
-%N = length(t);
-%f = linspace(-Fs/2, Fs/2, N);  % Frequency axis
-%thefilter = double(abs(f) <= B);     % Ideal filter: passes only within [-B, B]
-
 %% Parameters
 B = 100e3;                    % Channel bandwidth = 100 kHz
 T = 2 / B;                    % Pulse duration = 20 us
-Fs = 10 * B;                  % Sampling frequency = 1 MHz (oversampling)
+Fs = 20 * B;                  % Sampling frequency = 2 MHz (oversampling)
 dt = 1 / Fs;
-t = -5*T:dt:5*T;              % Time vector, wide enough to contain full pulse
+t = -10*T:dt:10*T;              % Time vector, wide enough to contain full pulse
 N = length(t);
 
 %% Square Pulse (duration 2T, centered at t = 0)
