@@ -52,8 +52,8 @@ legend('Original Spectrum', 'Filtered Spectrum');
 title('Frequency Domain Before and After Filtering');
 grid on;
 
-pulse1 = rectpuls(abs(t - T) ,T/2);  % First pulse at t = T
-pulse2 = rectpuls(abs(t - 3*T) , T/2); % Second pulse at t = 3T
+pulse1 = rectpuls((t - T) ,T/2);  % First pulse at t = T
+pulse2 = rectpuls((t - 3*T) , T/2); % Second pulse at t = 3T
 
 
 % Frequency-domain filtering
