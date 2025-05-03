@@ -9,14 +9,14 @@ the output or part1 :
 ![image](https://github.com/user-attachments/assets/5622f0de-4e5b-4b9c-92c5-a1e3305b0c44)
 ![image](https://github.com/user-attachments/assets/cf7bbd29-8bae-4e7f-9ec3-48b8ddc8f30e)
 
-
+##overlap happen but very small because we assume the filter is sharp edge filter not practical 
 
 ## 🔚 Summary
 | Task                                      | Observation                                                           |
 | ----------------------------------------- | --------------------------------------------------------------------- |
 | Square pulse through band-limited channel | Severe distortion, ringing, and time-spreading ⇒ causes ISI           |
 | Two square pulses                         | Overlap occurs ⇒ clearly demonstrates Inter-Symbol Interference       |
-| Raised Cosine pulse                       | Smoother, well-bounded spectrum ⇒ survives filtering with minimal ISI |
+
 ---
 ## part 2 :
 
