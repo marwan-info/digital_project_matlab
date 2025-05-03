@@ -3,11 +3,12 @@
 ## part 1 :  Inter-Symbol Interference due to band-limited channels
 the output or part1 : 
 
-![Screenshot (9)](https://github.com/user-attachments/assets/742b37de-e25c-498c-9a1d-c0c1da439448)
-![Screenshot (8)](https://github.com/user-attachments/assets/003210e3-f54d-4c40-92da-b2bd5743c698)
-![Screenshot (7)](https://github.com/user-attachments/assets/21e4e743-64ec-44e7-944f-48e851fb8b7e)
-![Screenshot (6)](https://github.com/user-attachments/assets/8964bf58-f1bf-423f-804f-76dd950b69e0)
-![Screenshot (5)](https://github.com/user-attachments/assets/b07c0170-21a3-4441-bd9e-ebc39286f496)
+![image](https://github.com/user-attachments/assets/17a0ef5b-4f56-4401-95f2-31f361aa8ac9)
+![image](https://github.com/user-attachments/assets/86437740-2e7c-4c08-ac9c-8f3554f4e09b)
+![image](https://github.com/user-attachments/assets/21f0cfb0-5a0b-4044-9e27-7be0253ba14c)
+![image](https://github.com/user-attachments/assets/5622f0de-4e5b-4b9c-92c5-a1e3305b0c44)
+![image](https://github.com/user-attachments/assets/cf7bbd29-8bae-4e7f-9ec3-48b8ddc8f30e)
+
 
 
 ## 🔚 Summary
