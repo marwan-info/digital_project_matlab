@@ -12,6 +12,7 @@ the output or part1 :
 ### to overcome the isi we can use delta function 
 #### delta with filter take shap of filter we can make filter square pulse so we are sure we see at reciver square pulse 
 ### or we can use functions which shap in frequnct domain is square pulse like this 
+
 ![image](https://github.com/user-attachments/assets/0ac2bacd-6662-4fa6-901c-e0e08628be59)
 ![image](https://github.com/user-attachments/assets/dff4ecf9-8e79-4fe1-a829-7b8e89515e81)
 
