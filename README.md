@@ -9,6 +9,12 @@ the output or part1 :
 ![image](https://github.com/user-attachments/assets/5622f0de-4e5b-4b9c-92c5-a1e3305b0c44)
 ![image](https://github.com/user-attachments/assets/cf7bbd29-8bae-4e7f-9ec3-48b8ddc8f30e)
 
+### to overcome the isi we can use delta function 
+#### delta with filter take shap of filter we can make filter square pulse so we are sure we see at reciver square pulse 
+### or we can use functions which shap in frequnct domain is square pulse like this 
+![image](https://github.com/user-attachments/assets/0ac2bacd-6662-4fa6-901c-e0e08628be59)
+![image](https://github.com/user-attachments/assets/dff4ecf9-8e79-4fe1-a829-7b8e89515e81)
+
 ## overlap happen but very small because we assume the filter is sharp edge filter not practical 
 
 ## 🔚 Summary
