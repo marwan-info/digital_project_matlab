@@ -69,7 +69,7 @@ for p = 1:numShapes
         %You trim the original transmitted bits to match the length of received bits before comparison.
 
         % Calculate BER
-        BER(k, p) = sum(bits_rx ~= bits_trimmed) / length(bits_trimmed);
+        BER(k, p) = sum(bits_rx ~= bits_trimmed) / length(bits_trimmed); % k snr 1 2 3 4 .. ... 10  p rect rootcosin .....
     end
 end
 % Plotting the results
