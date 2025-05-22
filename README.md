@@ -15,13 +15,23 @@ the output or part1 :
 ![image](https://github.com/user-attachments/assets/0ac2bacd-6662-4fa6-901c-e0e08628be59)
 ### after passing 3 upper shaps to filter notice that the 3 graphs between [ -100khz , 100khz ]
 ![image](https://github.com/user-attachments/assets/dff4ecf9-8e79-4fe1-a829-7b8e89515e81)
-
-
 ## overlap happen but very small because we assume the filter is sharp edge filter not practical 
-## 🔚 Summary
-| Task                                      | Observation                                                           |
-| ----------------------------------------- | --------------------------------------------------------------------- |
-| Square pulse through band-limited channel | Severe distortion, ringing, and time-spreading ⇒ causes ISI           |
-| Two square pulses                         | Overlap occurs ⇒ clearly demonstrates Inter-Symbol Interference       |
+
+## BER Simulation for Different Pulse Shapes in AWGN using BPSK 
+```
+ones(1, samples_per_symbol);                               % Rectangular
+rcosdesign(1.0, span, samples_per_symbol, 'normal');        % Raised Cosine, roll-off = 1.0
+rcosdesign(0.35, span, samples_per_symbol, 'sqrt');         % Root Raised Cosine, roll-off = 0.35
+gaussdesign(0.3, span, samples_per_symbol)                  % Gaussian, BT = 0.3
+```
+### diffrente shaps of filters : 
+![image](https://github.com/user-attachments/assets/278bf343-fed7-4ecd-b012-908ab1fa2260)
+
+### ones : simple rectangular pulse , Causes high ISI if symbols are close together , Not bandwidth-efficient; leads to significant spectral spreading , many side lobes
+### Normal Raised Cosine  : roll-off = 1.0 High roll-off factor → wider bandwidth but smoother transitions , Used to minimize ISI while controlling bandwidth , Good balance between time-domain smoothness and frequency-domain compactness
+### rcosdesign(0.35, span, samples_per_symbol, 'sqrt') — Root Raised Cosine (RRC) : roll-off = 0.35: Good trade-off → compact spectrum + reduced ISI , Common in systems like LTE, QAM 
+### gaussdesign(0.3, span, samples_per_symbol) — Gaussian Pulse : Controlled by BT (Bandwidth-Time product) , BT = 0.3: Bandwidth-efficient, but more pulse spreading , Smoothest pulse; no sharp edges. , Used in GMSK, GFSK (e.g., GSM, Bluetooth).
+![image](https://github.com/user-attachments/assets/dabe022e-da77-4887-b319-a0c8e33a8c1f)
+
 
 ---
