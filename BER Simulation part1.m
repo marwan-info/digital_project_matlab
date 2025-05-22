@@ -4,7 +4,7 @@ clc; clear; close all;
 
 % Parameters
 SNR_dB = 0:1:10;
-numBits = 1e5;
+numBits = 1e4;
 samples_per_symbol = 8;
 span = 6; % in symbols (for pulse shaping filters)
 
@@ -29,20 +29,20 @@ for p = 1:numShapes
     
     for k = 1:length(SNR_dB)
         % Generate bits and BPSK symbols
-        bits = randi([0 1], 1, numBits);
+        bits = randi([0 1], 1, numBits); % 10^5
         symbols = 2 * bits - 1;  % BPSK: 0 -> -1, 1 -> +1
 
         % Upsample symbols
-        tx_upsampled = upsample(symbols, samples_per_symbol);
+        tx_upsampled = upsample(symbols, samples_per_symbol); % just add zero between each symbol 
 
         % Transmit signal through pulse shaping filter
-        tx_signal = conv(tx_upsampled, pulse, 'full');
+        tx_signal = conv(tx_upsampled, pulse, 'full'); % make full convolution, so the output is longer than the input
 
         % Add AWGN
-        SNR_linear = 10^(SNR_dB(k)/10);
-        noise_power = var(tx_signal) / SNR_linear;
-        noise = sqrt(noise_power) * randn(1, length(tx_signal));
-        rx_signal = tx_signal + noise;
+        SNR_linear = 10^(SNR_dB(k)/10); %Converts SNR from dB to linear scale
+        noise_power = var(tx_signal) / SNR_linear; %variance signal -> power of message 
+        noise = sqrt(noise_power) * randn(1, length(tx_signal)); % randn : genrate random numbers from guassian distribution it is noise 
+        rx_signal = tx_signal + noise; 
 
         % Matched filter (same pulse shape)
         rx_filtered = conv(rx_signal, pulse, 'full');
@@ -73,7 +73,7 @@ end
 % Plotting the results
 figure;
 semilogy(SNR_dB, BER, 'LineWidth', 2);
-legend(pulse_labels, 'Location', 'southwest');
+legend(pulse_labels, 'Location', 'northwest');
 xlabel('SNR (dB)');
 ylabel('Bit Error Rate (BER)');
 title('BER vs SNR for Different Pulse Shapes in AWGN (BPSK)');
