@@ -61,10 +61,12 @@ for p = 1:numShapes
         rx_samples = rx_filtered(sample_points);
 
         % Demodulation
-        bits_rx = rx_samples > 0;
+        bits_rx = rx_samples > 0; % 000000 11111111111
 
         % Trim reference bits if needed
-        bits_trimmed = bits(1:length(bits_rx));
+        bits_trimmed = bits(1:length(bits_rx)); 
+        %Sometimes, due to filtering and convolution (full length output), the received samples length may not exactly match transmitted bits count.
+        %You trim the original transmitted bits to match the length of received bits before comparison.
 
         % Calculate BER
         BER(k, p) = sum(bits_rx ~= bits_trimmed) / length(bits_trimmed);
